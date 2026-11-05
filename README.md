@@ -84,11 +84,3 @@ print(resp.answer, resp.references)
 
 El script termina con código 0 si todas pasan y 1 si alguna falla.
 
-## Cambiar de proveedor
-
-Solo hay que modificar `store.get_embeddings()` y el `ChatGoogleGenerativeAI` de `rag.build_chain()` (por ejemplo, a `OpenAIEmbeddings` y `ChatOpenAI`).
-Si cambiás el modelo de embeddings, la huella cambia y la base se reconstruye sola.
-
-## Seguridad
-
-Nunca subas tu `.env`. Si una clave se filtra por error, revocala de inmediato.
